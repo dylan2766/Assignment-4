@@ -1,12 +1,18 @@
 //Ship class
 ship Ship;
 
+//startMenu class
+startMenu StartMenu;
+
 //variables
 boolean startMenu;
 
 void setup(){
   size(400,400);
   
+//Setup for startMenu
+StartMenu = new startMenu();
+
 //startMenu is true
 startMenu = true;
 
@@ -17,7 +23,14 @@ startMenu = true;
 
 void draw(){
 
+  if (startMenu == true){
+  StartMenu.visuals();
+  StartMenu.physics();
+  }
+  
+  if (startMenu == false){
   drawGame();
+  }
 }
 
 void drawGame(){
