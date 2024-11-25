@@ -1,28 +1,31 @@
-//Ship class
+//classes
 ship Ship;
-
-//startMenu class
 startMenu StartMenu;
+setup Setup;
+reset Reset;
 
 //variables
 boolean startMenu;
+boolean reset;
 
 void setup(){
   size(400,400);
+  Setup = new setup();
   
-//Setup for startMenu
-StartMenu = new startMenu();
-
-//startMenu is true
-startMenu = true;
-
-//setup for ship class
-  Ship = new ship();
-  Ship.setup();
+  Setup.start();
 }
 
 void draw(){
 
+  //reset
+  Reset.update();
+  
+  if (reset == true){
+   Setup.start();
+   reset = false;
+  }
+  
+  //start menu
   if (startMenu == true){
   StartMenu.visuals();
   StartMenu.physics();
@@ -42,6 +45,9 @@ void drawGame(){
   
   //ship move
   Ship.move(); 
+  
+  //reset
+  
 }
 
 void keyPressed(){
