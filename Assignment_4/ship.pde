@@ -19,7 +19,7 @@ class ship{
   }
   
   void visual(){
-   image(ship[frameCount/3 % ship.length], shipX.x, 360); 
+   image(ship[frameCount/3 % ship.length], shipX.x, 350); 
   }
   
   void move(){

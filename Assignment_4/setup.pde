@@ -12,6 +12,10 @@ class setup{
   //reset is false
   reset = false;
 
+  //Setup for space background
+  Space = new space();
+  Space.setup();
+
   //setup for ship class
   Ship = new ship();
   Ship.setup(); 

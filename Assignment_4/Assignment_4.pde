@@ -3,6 +3,7 @@ ship Ship;
 startMenu StartMenu;
 setup Setup;
 reset Reset;
+space Space;
 
 //variables
 boolean startMenu;
@@ -38,15 +39,14 @@ void draw(){
 
 void drawGame(){
   
-  background(0);
+  //Background
+  Space.background();
   
   //ship visuals
   Ship.visual();
   
   //ship move
   Ship.move(); 
-  
-  //reset
   
 }
 
