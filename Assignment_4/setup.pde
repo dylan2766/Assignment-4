@@ -20,6 +20,10 @@ class setup{
   Ship = new ship();
   Ship.setup(); 
   
+  //setup for asteroid
+  Asteroid = new asteroid();
+  Asteroid.setup();
+  
   //laser setup
   Laser = new laser();
   Laser.setup();

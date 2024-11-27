@@ -6,6 +6,7 @@ reset Reset;
 space Space;
 laser Laser;
 score Score;
+asteroid Asteroid;
 
 //variables
 boolean startMenu;
@@ -66,6 +67,9 @@ void drawGame(){
   
   //ship move
   Ship.move(); 
+  
+  //Asteroid
+  Asteroid.visual();
   
   //score
   Score.visual();
