@@ -52,15 +52,15 @@ void drawGame(){
   //Background
   Space.background();
   
+  //laser visuals
+  Laser.visual();
+  Laser.physics();
+  
   //ship visuals
   Ship.visual();
   
   //ship move
   Ship.move(); 
-  
-  //laser visuals
-  Laser.visual();
-  Laser.physics();
   
 }
 

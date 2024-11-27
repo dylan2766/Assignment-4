@@ -12,6 +12,8 @@ class laser{
     laserAcl = new PVector(shipX.x, laserAclY);
     laserPos = new PVector(shipX.x,laserStartPos);
     
+    //setup fired is false
+    fired = false;
 
     imageMode(CENTER);
     laser = new PImage[4];
@@ -33,7 +35,13 @@ class laser{
     }
     
    if (mousePressed){
-    laserPos.sub(laserVel.add(laserAcl));
+     fired = true;
+   }
+   if (!mousePressed && laserPos.y >= laserStartPos){
+    fired = false; 
+   }
+   if (fired == true){
+     laserPos.sub(laserVel.add(laserAcl));
    }
   }
   
