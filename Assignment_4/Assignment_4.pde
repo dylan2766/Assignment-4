@@ -4,6 +4,7 @@ startMenu StartMenu;
 setup Setup;
 reset Reset;
 space Space;
+laser Laser;
 
 //variables
 boolean startMenu;
