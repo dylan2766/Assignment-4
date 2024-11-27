@@ -5,6 +5,7 @@ setup Setup;
 reset Reset;
 space Space;
 laser Laser;
+score Score;
 
 //variables
 boolean startMenu;
@@ -19,6 +20,9 @@ PVector laserVel, laserPos, laserAcl;
 int laserPosY, laserStartPos;
 float laserAclY, laserSpd;
 boolean fired;
+
+//Score variables
+int score;
 
 void setup(){
   size(400,400);
@@ -62,6 +66,9 @@ void drawGame(){
   
   //ship move
   Ship.move(); 
+  
+  //score
+  Score.visual();
   
 }
 

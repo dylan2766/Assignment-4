@@ -23,6 +23,10 @@ class setup{
   //laser setup
   Laser = new laser();
   Laser.setup();
+  
+  //score setup
+  Score = new score();
+  Score.setup();
   }
   
 }
