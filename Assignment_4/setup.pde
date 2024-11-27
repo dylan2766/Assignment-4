@@ -19,6 +19,10 @@ class setup{
   //setup for ship class
   Ship = new ship();
   Ship.setup(); 
+  
+  //laser setup
+  Laser = new laser();
+  Laser.setup();
   }
   
 }

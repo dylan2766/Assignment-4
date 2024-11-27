@@ -1,7 +1,5 @@
 class ship{
   
-
-  
   PImage[] ship;
   
   void setup(){

@@ -53,6 +53,9 @@ void drawGame(){
   //ship move
   Ship.move(); 
   
+  //laser visuals
+  Laser.visual();
+  
 }
 
 void keyPressed(){

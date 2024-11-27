@@ -12,7 +12,7 @@ class laser{
   }
   
   void visual(){
-    image(laser[frameCount % laser.length], shipX.x, 350);
+    image(laser[frameCount/3 % laser.length], shipX.x - 1, 330);
   }
   
 }
