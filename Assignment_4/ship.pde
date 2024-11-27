@@ -6,7 +6,7 @@ class ship{
     //Start position
     shipPosX = 200;
     shipX = new PVector(shipPosX,5);
-    posX = new PVector(5,5);
+    posX = new PVector(8,8);
     
    imageMode(CENTER);
    ship = new PImage[2];
@@ -21,11 +21,11 @@ class ship{
   
   void move(){
     //Ship movement constraints
-    if (shipX.x <= 0){
-     shipX.x = 0; 
+    if (shipX.x <= 10){
+     shipX.x = 10; 
     }
-    if (shipX.x >= width){
-     shipX.x = width; 
+    if (shipX.x >= width - 10){
+     shipX.x = width - 10; 
     }
     
     //Left and right movement
