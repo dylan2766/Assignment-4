@@ -16,7 +16,8 @@ int shipPosX;
 
 //Laser variables
 PVector laserVel, laserPos, laserAcl;
-int laserPosY, laserAclY, laserStartPos;
+int laserPosY, laserStartPos;
+float laserAclY, laserSpd;
 boolean fired;
 
 void setup(){

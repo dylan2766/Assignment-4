@@ -7,8 +7,9 @@ class laser{
     //laser start position
     laserStartPos = 330;
     laserPosY = laserStartPos;
+    laserSpd = 5;
     laserAclY = 1;
-    laserVel = new PVector(shipX.x,5);
+    laserVel = new PVector(shipX.x,laserSpd);
     laserAcl = new PVector(shipX.x, laserAclY);
     laserPos = new PVector(shipX.x,laserStartPos);
     
@@ -35,15 +36,16 @@ class laser{
    }
    if (!mousePressed && laserPos.y >= laserStartPos){
     fired = false; 
-   }
-    
+   }  
    if (fired == true){
      laserPos.sub(laserVel.add(laserAcl));
-    if (laserVel.y >= 10){
-     laserVel.y = 10; 
+    if (laserVel.y >= 20){
+     laserVel.y = 20; 
     }
+    //reset position and speed
     if (laserPos.y <= 0){
      laserPos.y = laserStartPos; 
+     laserVel.y = 5;
     }
    }
   }
