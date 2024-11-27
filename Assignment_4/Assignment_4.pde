@@ -25,6 +25,11 @@ boolean fired;
 //Score variables
 int score;
 
+//Asteroid variables
+PVector asteroidPos, asteroidSpd, aStop;
+float asteroidMove;
+boolean asteroidSpawn;
+
 void setup(){
   size(400,400);
   Setup = new setup();
@@ -70,6 +75,7 @@ void drawGame(){
   
   //Asteroid
   Asteroid.visual();
+  Asteroid.physics();
   
   //score
   Score.visual();
