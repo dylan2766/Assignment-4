@@ -1,7 +1,6 @@
 class ship{
   
-  PVector shipX, posX;
-  int shipPosX;
+
   
   PImage[] ship;
   

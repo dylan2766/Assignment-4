@@ -10,6 +10,10 @@ laser Laser;
 boolean startMenu;
 boolean reset;
 
+//Ship variables
+PVector shipX, posX;
+int shipPosX;
+
 void setup(){
   size(400,400);
   Setup = new setup();
