@@ -16,7 +16,8 @@ int shipPosX;
 
 //Laser variables
 PVector laserVel, laserPos, laserAcl;
-int laserPosY, laserAclY;
+int laserPosY, laserAclY, laserStartPos;
+boolean fired;
 
 void setup(){
   size(400,400);
@@ -59,6 +60,7 @@ void drawGame(){
   
   //laser visuals
   Laser.visual();
+  Laser.physics();
   
 }
 

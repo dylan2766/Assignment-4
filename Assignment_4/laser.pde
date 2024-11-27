@@ -5,11 +5,12 @@ class laser{
   void setup(){
     
     //laser start position
-    laserPosY = 330;
+    laserStartPos = 330;
+    laserPosY = laserStartPos;
     laserAclY = 1;
     laserVel = new PVector(shipX.x,5);
     laserAcl = new PVector(shipX.x, laserAclY);
-    laserPos = new PVector(shipX.x,laserVel.y);
+    laserPos = new PVector(shipX.x,laserStartPos);
     
 
     imageMode(CENTER);
@@ -20,12 +21,15 @@ class laser{
   }
   
   void visual(){
-    image(laser[frameCount/3 % laser.length], shipX.x - 1, laserPosY);
+    image(laser[frameCount/3 % laser.length], shipX.x - 1, laserPos.y);
   }
   
   void physics(){
     if (laserVel.y >= 10){
      laserVel.y = 10; 
+    }
+    if (laserPos.y <= 0){
+     laserPos.y = laserStartPos; 
     }
     
    if (mousePressed){
