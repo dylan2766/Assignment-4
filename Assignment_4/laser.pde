@@ -23,25 +23,28 @@ class laser{
   }
   
   void visual(){
+    if (fired == true){
     image(laser[frameCount/3 % laser.length], shipX.x - 1, laserPos.y);
+    }
   }
   
   void physics(){
-    if (laserVel.y >= 10){
-     laserVel.y = 10; 
-    }
-    if (laserPos.y <= 0){
-     laserPos.y = laserStartPos; 
-    }
-    
+    //Checks if laser is fired
    if (mousePressed){
      fired = true;
    }
    if (!mousePressed && laserPos.y >= laserStartPos){
     fired = false; 
    }
+    
    if (fired == true){
      laserPos.sub(laserVel.add(laserAcl));
+    if (laserVel.y >= 10){
+     laserVel.y = 10; 
+    }
+    if (laserPos.y <= 0){
+     laserPos.y = laserStartPos; 
+    }
    }
   }
   
