@@ -14,6 +14,10 @@ boolean reset;
 PVector shipX, posX;
 int shipPosX;
 
+//Laser variables
+PVector laserVel, laserPos, laserAcl;
+int laserPosY, laserAclY;
+
 void setup(){
   size(400,400);
   Setup = new setup();
