@@ -18,7 +18,7 @@ int shipPosX;
 
 //Laser variables
 PVector laserVel, laserPos, laserAcl;
-int laserPosY, laserStartPos;
+int laserStartPos;
 float laserAclY, laserSpd;
 boolean fired;
 
@@ -26,9 +26,11 @@ boolean fired;
 int score;
 
 //Asteroid variables
-PVector asteroidPos, asteroidSpd, aStop;
+PVector asteroidPos, asteroidSpd;
 float asteroidMove;
 boolean asteroidSpawn;
+float aX1, aX2;
+
 
 void setup(){
   size(400,400);
@@ -63,19 +65,17 @@ void drawGame(){
   //Background
   Space.background();
   
-  //laser visuals
-  Laser.visual();
-  Laser.physics();
-  
-  //ship visuals
-  Ship.visual();
-  
-  //ship move
-  Ship.move(); 
-  
   //Asteroid
   Asteroid.visual();
   Asteroid.physics();
+  
+  //laser
+  Laser.visual();
+  Laser.physics();
+  
+  //ship
+  Ship.visual();
+  Ship.move(); 
   
   //score
   Score.visual();

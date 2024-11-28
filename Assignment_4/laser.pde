@@ -1,17 +1,17 @@
 class laser{
   
   PImage[] laser;
+  float laserAccel;
   
   void setup(){
     
     //laser start position
     laserStartPos = 330;
-    laserPosY = laserStartPos;
     laserSpd = 5;
     laserAclY = 1;
     laserVel = new PVector(shipX.x,laserSpd);
-    laserAcl = new PVector(shipX.x, laserAclY);
-    laserPos = new PVector(shipX.x,laserStartPos);
+    laserAcl = new PVector(0, laserAclY);
+    laserPos = new PVector(shipX.x,shipX.y);
     
     //setup fired is false
     fired = false;
@@ -25,11 +25,12 @@ class laser{
   
   void visual(){
     if (fired == true){
-    image(laser[frameCount/3 % laser.length], shipX.x - 1, laserPos.y);
+    image(laser[frameCount/3 % laser.length], shipX.x, laserPos.y);
     }
   }
   
   void physics(){
+    
     //Checks if laser is fired
    if (mousePressed){
      fired = true;
@@ -44,6 +45,11 @@ class laser{
     }
     //reset position and speed
     if (laserPos.y <= 0){
+     laserPos.y = laserStartPos; 
+     laserVel.y = 5;
+    }
+    //check if laser hit asteroid
+    if (shipX.x > aX1 && shipX.x < aX2 && laserPos.y < 200){
      laserPos.y = laserStartPos; 
      laserVel.y = 5;
     }

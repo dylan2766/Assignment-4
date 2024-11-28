@@ -5,8 +5,8 @@ class ship{
   void setup(){
     //Start position
     shipPosX = 200;
-    shipX = new PVector(shipPosX,5);
-    posX = new PVector(8,8);
+    shipX = new PVector(shipPosX,0);
+    posX = new PVector(8,0);
     
    imageMode(CENTER);
    ship = new PImage[2];

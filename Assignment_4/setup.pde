@@ -1,7 +1,7 @@
 class setup{
   
   void start(){
-    
+
   //Setup for startMenu
   StartMenu = new startMenu();
   //startMenu is true
