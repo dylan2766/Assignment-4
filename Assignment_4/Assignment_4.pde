@@ -89,11 +89,3 @@ void drawGame(){
   Score.visual();
   
 }
-
-void keyPressed(){
-  
-}
-
-void mousePressed(){
-  
-}
