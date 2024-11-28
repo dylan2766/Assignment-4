@@ -5,6 +5,7 @@ class enemyNormal{
     eNMove = false;
     eNDead = true;
     eNSpawn = true;
+    eNSpawn2 = false;
     
     eNX = random(10,width-10);
     eNPos = new PVector(eNX,-30);
@@ -16,19 +17,28 @@ class enemyNormal{
     
    //Temp enemyNormal
    fill(255);
-   ellipse(eNPos.x, eNPos.y,40,40);
+   ellipse(eNX, eNPos.y,40,40);
   }
   
   void physics(){
     
-    if (eNDead == true && eNSpawn == true){
+    if (eNSpawn2 == true || (eNDead == true && eNSpawn == true)){
      eNX = random(10,width-10);
      eNMove = true;
+     eNSpawn2 = false;
+     eNDead = false;
+     eNSpawn = false;
     }
     if (eNMove == true){
      eNPos.add(eNSpdY);
     }
     
+    //Check if enemyNormal reaches past player
+    if (eNPos.y >= 420){
+     eNPos.y = -30;
+     println("-1 life");
+     eNSpawn2 = true;
+    }
   }
   
 }
