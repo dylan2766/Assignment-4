@@ -1,0 +1,7 @@
+class enemyNormal{
+  
+  void setup(){
+    
+  }
+  
+}

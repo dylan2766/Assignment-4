@@ -22,6 +22,10 @@ class setup{
   Asteroid = new asteroid();
   Asteroid.setup();
   
+  //setup for enemyNormal
+  EnemyNormal = new enemyNormal();
+  EnemyNormal.setup();
+  
   //laser setup
   Laser = new laser();
   Laser.setup();

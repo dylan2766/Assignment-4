@@ -8,6 +8,7 @@ laser Laser;
 score Score;
 asteroid Asteroid;
 explosion Explosion;
+enemyNormal EnemyNormal;
 
 //variables
 boolean startMenu;
