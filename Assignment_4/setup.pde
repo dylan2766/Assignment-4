@@ -4,12 +4,10 @@ class setup{
 
   //Setup for startMenu
   StartMenu = new startMenu();
-  //startMenu is true
   startMenu = true;
 
   //Setup for reset
   Reset = new reset();
-  //reset is false
   reset = false;
 
   //Setup for space background
