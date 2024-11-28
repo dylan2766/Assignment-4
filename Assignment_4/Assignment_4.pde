@@ -36,6 +36,10 @@ float aX1, aX2;
 //Explosion variables
 float explX, explY;
 
+//enemyNormal variables
+PVector eNPos, eNSpdY;
+float eNX;
+boolean eNSpawn, eNDead, eNMove;
 
 void setup(){
   size(400,400);
@@ -74,6 +78,10 @@ void drawGame(){
   //Asteroid
   Asteroid.visual();
   Asteroid.physics();
+  
+  //EnemyNormal
+  EnemyNormal.visual();
+  EnemyNormal.physics();
   
   //laser
   Laser.visual();
