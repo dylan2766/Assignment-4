@@ -7,6 +7,7 @@ space Space;
 laser Laser;
 score Score;
 asteroid Asteroid;
+explosion Explosion;
 
 //variables
 boolean startMenu;
@@ -20,7 +21,7 @@ int shipPosX;
 PVector laserVel, laserPos, laserAcl;
 int laserStartPos;
 float laserAclY, laserSpd;
-boolean fired;
+boolean fired, hit;
 
 //Score variables
 int score;
@@ -31,16 +32,20 @@ float asteroidMove;
 boolean asteroidSpawn;
 float aX1, aX2;
 
+//Explosion variables
+float explX, explY;
+
 
 void setup(){
   size(400,400);
+  
   Setup = new setup();
   
   Setup.start();
 }
 
 void draw(){
-
+  
   //reset
   Reset.update();
   
@@ -72,6 +77,9 @@ void drawGame(){
   //laser
   Laser.visual();
   Laser.physics();
+  
+  //explosion
+  Explosion.visual();
   
   //ship
   Ship.visual();

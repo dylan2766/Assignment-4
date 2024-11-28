@@ -52,6 +52,9 @@ class laser{
     if (shipX.x > aX1 && shipX.x < aX2 && laserPos.y < 200){
      laserPos.y = laserStartPos; 
      laserVel.y = 5;
+     hit = true;
+     explX = asteroidPos.x;
+     explY = asteroidPos.y;
     }
    }
   }

@@ -29,6 +29,10 @@ class setup{
   //score setup
   Score = new score();
   Score.setup();
+  
+  //explosion setup
+  Explosion = new explosion();
+  Explosion.setup();
   }
   
 }
