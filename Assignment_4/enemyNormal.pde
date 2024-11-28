@@ -24,6 +24,7 @@ class enemyNormal{
     
     if (eNSpawn2 == true || (eNDead == true && eNSpawn == true)){
      eNX = random(10,width-10);
+     eNPos.y = -30;
      eNMove = true;
      eNSpawn2 = false;
      eNDead = false;
@@ -38,6 +39,12 @@ class enemyNormal{
      eNPos.y = -30;
      println("-1 life");
      eNSpawn2 = true;
+    }
+    
+    //Check if laser hits enemyNormal
+    if (eNDead == false && (shipX.x >= eNX - 40 && shipX.x <= eNX + 40 && laserPos.y <= eNPos.y)){
+      eNDead = true;
+      eNSpawn = true;
     }
   }
   
