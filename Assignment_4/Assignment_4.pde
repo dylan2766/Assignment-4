@@ -38,7 +38,7 @@ float explX, explY;
 
 //enemyNormal variables
 PVector eNPos, eNSpdY;
-float eNX;
+float eNX, eNHp;
 boolean eNSpawn, eNDead, eNMove, eNSpawn2;
 
 void setup(){

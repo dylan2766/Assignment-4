@@ -2,6 +2,7 @@ class enemyNormal{
   
   void setup(){
     
+    eNHp = 10;
     eNMove = false;
     eNDead = true;
     eNSpawn = true;
@@ -25,6 +26,7 @@ class enemyNormal{
     if (eNSpawn2 == true || (eNDead == true && eNSpawn == true)){
      eNX = random(10,width-10);
      eNPos.y = -30;
+     eNHp = 10;
      eNMove = true;
      eNSpawn2 = false;
      eNDead = false;
@@ -42,9 +44,23 @@ class enemyNormal{
     }
     
     //Check if laser hits enemyNormal
-    if (eNDead == false && (shipX.x >= eNX - 40 && shipX.x <= eNX + 40 && laserPos.y <= eNPos.y)){
-      eNDead = true;
-      eNSpawn = true;
+    if (eNDead == false && (shipX.x >= eNX - 30 && shipX.x <= eNX + 30 && laserPos.y <= eNPos.y)){
+
+
+    }
+    //check if laser hit enemyNormal
+    if (fired == true && eNDead == false && (shipX.x >= eNX - 30 && shipX.x <= eNX + 30 && laserPos.y <= eNPos.y)){
+     eNHp = eNHp - 5;
+     laserPos.y = laserStartPos; 
+     laserVel.y = 5;
+     hit = true;
+     explX = eNX;
+     explY = eNPos.y;
+      if (eNHp <= 0){
+        score = score + 20;
+        eNDead = true;
+        eNSpawn = true;
+      }
     }
   }
   

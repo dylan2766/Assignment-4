@@ -35,7 +35,7 @@ class laser{
    if (mousePressed){
      fired = true;
    }
-   if (!mousePressed && laserPos.y >= laserStartPos){
+   if (!mousePressed && laserPos.y <= laserStartPos){
     fired = false; 
    }  
    if (fired == true){
