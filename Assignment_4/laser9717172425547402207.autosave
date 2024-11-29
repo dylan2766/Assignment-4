@@ -36,7 +36,7 @@ class laser{
      fired = true;
    }
    
-   if (!mousePressed && laserPos.y >= laserStartPos){
+   if (!mousePressed && laserPos.y <= laserStartPos){
     fired = false; 
    }  
    
@@ -47,7 +47,7 @@ class laser{
     }
     
     //reset position and speed
-    if (laserPos.y <= 0){
+    if (laserPos.y <= 0 || fired == false){
      laserPos.y = laserStartPos; 
      laserVel.y = 5;
     }
