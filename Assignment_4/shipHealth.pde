@@ -13,4 +13,10 @@ class shipHealth{
    }
  }
  
+ void physics(){
+  if (shipHealth <= 0){
+   lose = true; 
+  }
+ }
+ 
 }

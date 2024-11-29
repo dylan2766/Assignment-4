@@ -10,10 +10,10 @@ asteroid Asteroid;
 explosion Explosion;
 enemyNormal EnemyNormal;
 shipHealth ShipHealth;
+loseMenu LoseMenu;
 
 //variables
-boolean startMenu;
-boolean reset;
+boolean startMenu, reset, win, lose;
 
 //Ship variables
 PVector shipX, posX;
@@ -69,6 +69,10 @@ void draw(){
   if (startMenu == false){
   drawGame();
   }
+  
+  if (lose == true){
+   loseMenu(); 
+  }
 }
 
 void drawGame(){
@@ -100,5 +104,13 @@ void drawGame(){
   
   //ship health
   ShipHealth.visual();
+  ShipHealth.physics();
   
+}
+
+void loseMenu(){
+  
+  //loseMenu visuals
+ LoseMenu.visual(); 
+ 
 }

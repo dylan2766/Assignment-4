@@ -2,6 +2,10 @@ class setup{
   
   void start(){
 
+  //Setup for win and lose
+  win = false;
+  lose = false;
+    
   //Setup for startMenu
   StartMenu = new startMenu();
   startMenu = true;
@@ -41,6 +45,10 @@ class setup{
   //explosion setup
   Explosion = new explosion();
   Explosion.setup();
+  
+  //loseMenu setup
+  LoseMenu = new loseMenu();
+  LoseMenu.setup();
   }
   
 }
