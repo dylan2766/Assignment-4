@@ -65,6 +65,10 @@ class setup{
   //loseMenu setup
   LoseMenu = new loseMenu();
   LoseMenu.setup();
+  
+  //winMenu setup
+  WinMenu = new winMenu();
+  WinMenu.setup();
   }
   
 }

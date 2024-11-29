@@ -15,6 +15,7 @@ enemyScout EnemyScout;
 enemyTank EnemyTank;
 enemyNormal2 EnemyNormal2;
 enemyScout2 EnemyScout2;
+winMenu WinMenu;
 
 //variables
 boolean startMenu, reset, win, lose;
