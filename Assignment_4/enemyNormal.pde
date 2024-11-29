@@ -12,7 +12,7 @@ class enemyNormal{
     
     eNX = random(10,width-10);
     eNPos = new PVector(eNX,-60);
-    eNSpdY = new PVector(0,2);
+    eNSpdY = new PVector(0,1.5);
     
     imageMode(CENTER);
     enemyNormal = new PImage[9];

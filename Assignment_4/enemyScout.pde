@@ -12,7 +12,7 @@ class enemyScout{
     
     eSX = random(10,width-10);
     eSPos = new PVector(eSX,-60);
-    eSSpdY = new PVector(0,4);
+    eSSpdY = new PVector(0,3);
     
     imageMode(CENTER);
     enemyScout = new PImage[9];
