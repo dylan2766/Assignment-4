@@ -4,6 +4,7 @@ class startMenu{
     background(10,40,80);
     fill(255,150);
     noStroke();
+    rectMode(CORNERS);
     rect(0,300,width,height);
   }
   

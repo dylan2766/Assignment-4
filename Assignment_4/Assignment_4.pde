@@ -112,5 +112,6 @@ void loseMenu(){
   
   //loseMenu visuals
  LoseMenu.visual(); 
+ LoseMenu.physics();
  
 }
