@@ -89,6 +89,20 @@ class laser{
         eSSpawn = true;
       }
     }
+    //check if laser hit enemyTank
+    if (fired == true && eTDead == false && (shipX.x >= eTX - 30 && shipX.x <= eTX + 30 && laserPos.y <= eTPos.y)){
+     eTHp = eTHp - 5;
+     laserPos.y = laserStartPos; 
+     laserVel.y = 5;
+     hit = true;
+     explX = eTX;
+     explY = eTPos.y;
+      if (eTHp <= 0){
+        score = score + 30;
+        eTDead = true;
+        eTSpawn = true;
+      }
+    }
    }
   }
   
