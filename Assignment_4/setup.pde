@@ -1,7 +1,7 @@
 class setup{
   
   void start(){
-
+  
   //Setup for win and lose
   win = false;
   lose = false;
@@ -9,6 +9,7 @@ class setup{
   //Setup for startMenu
   StartMenu = new startMenu();
   startMenu = true;
+  StartMenu.setup();
 
   //Setup for reset
   Reset = new reset();

@@ -1,17 +1,30 @@
 class startMenu{
+  
+  PImage[] startingMenu;
+ 
+  void setup(){
+   
+   imageMode(CENTER);
+   startingMenu = new PImage[59];
+   for(int i = 0; i < startingMenu.length; i++){
+    startingMenu[i] = loadImage("startMenu" + i + ".png"); 
+   } 
+   
+  }
  
   void visuals(){
-    background(10,40,80);
-    fill(255,150);
-    noStroke();
-    rectMode(CORNERS);
-    rect(0,300,width,height);
+    
+   image(startingMenu[frameCount/2 % startingMenu.length], width/2, height/2);
+    
   }
   
   void physics(){
-   if (mousePressed && mouseY >= 300){
-    startMenu = false; 
-   }
+   
+    if (keyPressed){
+      if (key == ' '){
+      startMenu = false; 
+     }
+    }
   }
   
 }
