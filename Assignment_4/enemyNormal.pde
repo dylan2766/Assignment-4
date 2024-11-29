@@ -46,7 +46,7 @@ class enemyNormal{
     //Check if enemyNormal reaches past player
     if (eNPos.y >= 420){
      eNPos.y = -30;
-     println("-1 life");
+     shipHealth = shipHealth - 20;
      eNSpawn2 = true;
     }
   }

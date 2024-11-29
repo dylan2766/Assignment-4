@@ -18,6 +18,10 @@ class setup{
   Ship = new ship();
   Ship.setup(); 
   
+  //setup for shipHealth class
+  ShipHealth = new shipHealth();
+  ShipHealth.setup();
+  
   //setup for asteroid
   Asteroid = new asteroid();
   Asteroid.setup();

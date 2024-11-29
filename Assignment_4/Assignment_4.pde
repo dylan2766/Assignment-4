@@ -9,6 +9,7 @@ score Score;
 asteroid Asteroid;
 explosion Explosion;
 enemyNormal EnemyNormal;
+shipHealth ShipHealth;
 
 //variables
 boolean startMenu;
@@ -96,5 +97,8 @@ void drawGame(){
   
   //score
   Score.visual();
+  
+  //ship health
+  ShipHealth.visual();
   
 }
