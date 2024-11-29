@@ -16,7 +16,7 @@ boolean reset;
 
 //Ship variables
 PVector shipX, posX;
-int shipPosX;
+int shipPosX, shipHealth;
 
 //Laser variables
 PVector laserVel, laserPos, laserAcl;

@@ -26,10 +26,6 @@ class asteroid{
     aX1 = asteroidPos.x - 40;
     aX2 = asteroidPos.x + 40;
     
-    if (key == 'z'){
-     score = 200;
-    }
-    
     if (score >= 200){
       asteroidSpawn = true;
     }
