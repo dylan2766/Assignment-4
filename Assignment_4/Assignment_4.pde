@@ -101,6 +101,10 @@ void draw(){
   if (lose == true){
    loseMenu(); 
   }
+  
+  if (win == true){
+   winMenu(); 
+  }
 }
 
 void drawGame(){
@@ -145,6 +149,7 @@ void drawGame(){
   
   //score
   Score.visual();
+  Score.physics();
   
   //ship health
   ShipHealth.visual();
@@ -158,4 +163,12 @@ void loseMenu(){
  LoseMenu.visual(); 
  LoseMenu.physics();
  
+}
+
+void winMenu(){
+ 
+  //winMenu visuals
+  WinMenu.visual();
+  WinMenu.physics();
+  
 }
