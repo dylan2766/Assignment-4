@@ -42,26 +42,6 @@ class enemyNormal{
      println("-1 life");
      eNSpawn2 = true;
     }
-    
-    //Check if laser hits enemyNormal
-    if (eNDead == false && (shipX.x >= eNX - 30 && shipX.x <= eNX + 30 && laserPos.y <= eNPos.y)){
-
-
-    }
-    //check if laser hit enemyNormal
-    if (fired == true && eNDead == false && (shipX.x >= eNX - 30 && shipX.x <= eNX + 30 && laserPos.y <= eNPos.y)){
-     eNHp = eNHp - 5;
-     laserPos.y = laserStartPos; 
-     laserVel.y = 5;
-     hit = true;
-     explX = eNX;
-     explY = eNPos.y;
-      if (eNHp <= 0){
-        score = score + 20;
-        eNDead = true;
-        eNSpawn = true;
-      }
-    }
   }
   
 }
