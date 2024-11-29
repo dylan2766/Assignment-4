@@ -30,9 +30,9 @@ class enemyScout{
   void physics(){
     
     if (score >= 300){
-    if (eSSpawn2 == true || (eSDead == true && eSSpawn == true)){
+    if (eSSpawn2 == true|| (eSDead == true && eSSpawn == true)){
      eSX = random(10,width-10);
-     eSPos.y = -60;
+     eSPos.y = random(-320,-60);
      eSHp = 5;
      eSMove = true;
      eSSpawn2 = false;
