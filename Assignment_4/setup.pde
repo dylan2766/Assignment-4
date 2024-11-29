@@ -34,6 +34,10 @@ class setup{
   EnemyNormal = new enemyNormal();
   EnemyNormal.setup();
   
+  //setup for enemyScout
+  EnemyScout = new enemyScout();
+  EnemyScout.setup();
+  
   //laser setup
   Laser = new laser();
   Laser.setup();

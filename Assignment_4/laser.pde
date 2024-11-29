@@ -75,6 +75,20 @@ class laser{
         eNSpawn = true;
       }
     }
+    //check if laser hit enemyScout
+    if (fired == true && eSDead == false && (shipX.x >= eSX - 30 && shipX.x <= eSX + 30 && laserPos.y <= eSPos.y)){
+     eSHp = eSHp - 5;
+     laserPos.y = laserStartPos; 
+     laserVel.y = 5;
+     hit = true;
+     explX = eSX;
+     explY = eSPos.y;
+      if (eSHp <= 0){
+        score = score + 20;
+        eSDead = true;
+        eSSpawn = true;
+      }
+    }
    }
   }
   

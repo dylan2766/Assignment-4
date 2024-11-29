@@ -11,6 +11,7 @@ explosion Explosion;
 enemyNormal EnemyNormal;
 shipHealth ShipHealth;
 loseMenu LoseMenu;
+enemyScout EnemyScout;
 
 //variables
 boolean startMenu, reset, win, lose;
@@ -41,6 +42,11 @@ float explX, explY;
 PVector eNPos, eNSpdY;
 float eNX, eNHp;
 boolean eNSpawn, eNDead, eNMove, eNSpawn2;
+
+//enemyScout variables
+PVector eSPos, eSSpdY;
+float eSX, eSHp;
+boolean eSSpawn, eSDead, eSMove, eSSpawn2;
 
 void setup(){
   size(400,400);
@@ -87,6 +93,10 @@ void drawGame(){
   //EnemyNormal
   EnemyNormal.visual();
   EnemyNormal.physics();
+  
+  //EnemyScout
+  EnemyScout.visual();
+  EnemyScout.physics();
   
   //laser
   Laser.visual();
