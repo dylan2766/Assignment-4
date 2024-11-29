@@ -29,11 +29,26 @@ class enemyScout2{
   
   void physics(int spawnScout){
     
+    //changes spdScout to 2.5-3 before 400 score
+    if (score < 400){
+    spdScout = random(2.5,3);
+    }
+    
+    //changes spdScout to 2.8-3.5 between 400-700 score
+    if (score >= 400 && score < 700){
+    spdScout = random(2.8,3.5);
+    }
+    
+    //changes spdScout to 3.5-4.5 between 700-1000 score
+    if (score >= 700 && score <= 1000){
+    spdScout = random(3.5,4.5);
+    }
+    
     if (score >= spawnScout){
     if (eS2Spawn2 == true|| (eSDead2 == true && eS2Spawn == true)){
      eSX2 = random(10,width-10);
      eSPos2.y = random(-320,-60);
-     eSSpdY2.y = random(2.5,3);
+     eSSpdY2.y = spdScout;
      eSHp2 = 5;
      eSMove2 = true;
      eS2Spawn2 = false;

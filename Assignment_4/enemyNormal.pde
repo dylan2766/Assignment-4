@@ -31,11 +31,26 @@ class enemyNormal{
   
   void physics(int scoreN){
     
+    //changes speed to 1.3 - 1.7 before 300 score
+    if (score < 300){
+     spdNormal = random(1.3,1.7); 
+    }
+    
+    //changes speed to 1.5 - 2 between 300-500 score
+    if (score >= 300 && score < 500){
+     spdNormal = random(1.5,2);   
+    }
+    
+    //changes speed to 1.9 - 2.5 between 300-500 score
+    if (score >= 500 && score <= 1000){
+     spdNormal = random(1.9,2.5);   
+    }
+    
     if (score >= scoreN){
     if (eNSpawn2 == true || (eNDead == true && eNSpawn == true)){
      eNX = random(10,width-10);
      eNPos.y = random(-120,-60);
-     eNSpdY.y = random(1.3,1.7);
+     eNSpdY.y = spdNormal;
      eNHp = 10;
      eNMove = true;
      eNSpawn2 = false;

@@ -29,11 +29,26 @@ class enemyTank{
   
   void physics(int spawnTank){
     
+    //changes spdTank to 0.45 - 0.65 before 500 score
+    if (score < 500){
+    spdTank = random(0.45,0.65);
+    }
+    
+    //changes spdTank to 0.6 - 0.85 between 500 - 750 score
+    if (score >= 500 && score < 750){
+    spdTank = random(0.6,0.85);
+    }
+    
+    //changes spdTank to 1 - 1.5 between 500 - 750 score
+    if (score >= 700 && score <= 1000){
+    spdTank = random(1,1.5);
+    }
+    
     if (score >= spawnTank){
     if (eTSpawn2 == true|| (eTDead == true && eTSpawn == true)){
      eTX = random(10,width-10);
      eTPos.y = random(-90,-60);
-     eTSpdY.y = random(0.45,0.65);
+     eTSpdY.y = spdTank;
      eTHp = 20;
      eTMove = true;
      eTSpawn2 = false;

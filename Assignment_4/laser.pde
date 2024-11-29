@@ -70,7 +70,7 @@ class laser{
      explX = eNX;
      explY = eNPos.y;
       if (eNHp <= 0){
-        score = score + 20;
+        score = score + 10;
         eNDead = true;
         eNSpawn = true;
       }
@@ -85,7 +85,7 @@ class laser{
      explX = eNX2;
      explY = eNPos2.y;
       if (eNHp2 <= 0){
-        score = score + 20;
+        score = score + 10;
         eNDead2 = true;
         eN2Spawn = true;
       }

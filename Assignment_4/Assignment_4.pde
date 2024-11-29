@@ -66,6 +66,9 @@ PVector eTPos, eTSpdY;
 float eTX, eTHp;
 boolean eTSpawn, eTDead, eTMove, eTSpawn2;
 
+//enemySpeed Change variables
+float spdNormal, spdScout, spdTank;
+
 void setup(){
   size(400,400);
   
