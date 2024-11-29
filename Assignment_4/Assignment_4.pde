@@ -49,6 +49,11 @@ PVector eSPos, eSSpdY;
 float eSX, eSHp;
 boolean eSSpawn, eSDead, eSMove, eSSpawn2;
 
+//enemyTank variables
+PVector eTPos, eTSpdY;
+float eTX, eTHp;
+boolean eTSpawn, eTDead, eTMove, eTSpawn2;
+
 void setup(){
   size(400,400);
   
