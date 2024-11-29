@@ -32,7 +32,7 @@ class enemyNormal{
     
     if (eNSpawn2 == true || (eNDead == true && eNSpawn == true)){
      eNX = random(10,width-10);
-     eNPos.y = -60;
+     eNPos.y = random(-120,-60);
      eNHp = 10;
      eNMove = true;
      eNSpawn2 = false;
