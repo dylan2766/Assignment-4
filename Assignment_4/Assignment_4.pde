@@ -12,6 +12,7 @@ enemyNormal EnemyNormal;
 shipHealth ShipHealth;
 loseMenu LoseMenu;
 enemyScout EnemyScout;
+enemyTank EnemyTank;
 
 //variables
 boolean startMenu, reset, win, lose;
@@ -97,6 +98,10 @@ void drawGame(){
   //EnemyScout
   EnemyScout.visual();
   EnemyScout.physics();
+  
+  //EnemyTank
+  EnemyTank.visual();
+  EnemyTank.physics();
   
   //laser
   Laser.visual();

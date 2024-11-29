@@ -38,6 +38,10 @@ class setup{
   EnemyScout = new enemyScout();
   EnemyScout.setup();
   
+  //setup for enemyTank
+  EnemyTank = new enemyTank();
+  EnemyTank.setup();
+  
   //laser setup
   Laser = new laser();
   Laser.setup();
