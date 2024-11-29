@@ -33,6 +33,7 @@ class enemyScout{
     if (eSSpawn2 == true|| (eSDead == true && eSSpawn == true)){
      eSX = random(10,width-10);
      eSPos.y = random(-320,-60);
+     eSSpdY.y = random(2.7,3.3);
      eSHp = 5;
      eSMove = true;
      eSSpawn2 = false;
