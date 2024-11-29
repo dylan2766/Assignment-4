@@ -13,6 +13,8 @@ shipHealth ShipHealth;
 loseMenu LoseMenu;
 enemyScout EnemyScout;
 enemyTank EnemyTank;
+enemyNormal2 EnemyNormal2;
+enemyScout2 EnemyScout2;
 
 //variables
 boolean startMenu, reset, win, lose;
@@ -44,10 +46,20 @@ PVector eNPos, eNSpdY;
 float eNX, eNHp;
 boolean eNSpawn, eNDead, eNMove, eNSpawn2;
 
+//enemyNormal2 variables
+PVector eNPos2, eNSpdY2;
+float eNX2, eNHp2;
+boolean eN2Spawn, eNDead2, eNMove2, eN2Spawn2;
+
 //enemyScout variables
 PVector eSPos, eSSpdY;
 float eSX, eSHp;
 boolean eSSpawn, eSDead, eSMove, eSSpawn2;
+
+//enemyScout2 variables
+PVector eSPos2, eSSpdY2;
+float eSX2, eSHp2;
+boolean eS2Spawn, eSDead2, eSMove2, eS2Spawn2;
 
 //enemyTank variables
 PVector eTPos, eTSpdY;
@@ -98,15 +110,23 @@ void drawGame(){
   
   //EnemyNormal
   EnemyNormal.visual();
-  EnemyNormal.physics();
+  EnemyNormal.physics(0);
+  
+  //EnemyNormal2
+  EnemyNormal2.visual();
+  EnemyNormal2.physics(100);
   
   //EnemyScout
   EnemyScout.visual();
-  EnemyScout.physics();
+  EnemyScout.physics(300);
+  
+  //EnemyScout2
+  EnemyScout2.visual();
+  EnemyScout2.physics(500);
   
   //EnemyTank
   EnemyTank.visual();
-  EnemyTank.physics();
+  EnemyTank.physics(400);
   
   //laser
   Laser.visual();

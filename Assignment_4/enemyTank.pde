@@ -27,9 +27,9 @@ class enemyTank{
     
   }
   
-  void physics(){
+  void physics(int spawnTank){
     
-    if (score >= 400){
+    if (score >= spawnTank){
     if (eTSpawn2 == true|| (eTDead == true && eTSpawn == true)){
      eTX = random(10,width-10);
      eTPos.y = random(-90,-60);

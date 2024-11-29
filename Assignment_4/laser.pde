@@ -75,6 +75,22 @@ class laser{
         eNSpawn = true;
       }
     }
+    
+    //check if laser hit enemyNormal2
+    if (fired == true && eNDead2 == false && (shipX.x >= eNX2 - 30 && shipX.x <= eNX2 + 30 && laserPos.y <= eNPos2.y)){
+     eNHp2 = eNHp2 - 5;
+     laserPos.y = laserStartPos; 
+     laserVel.y = 5;
+     hit = true;
+     explX = eNX2;
+     explY = eNPos2.y;
+      if (eNHp2 <= 0){
+        score = score + 20;
+        eNDead2 = true;
+        eN2Spawn = true;
+      }
+    }
+    
     //check if laser hit enemyScout
     if (fired == true && eSDead == false && (shipX.x >= eSX - 30 && shipX.x <= eSX + 30 && laserPos.y <= eSPos.y)){
      eSHp = eSHp - 5;
@@ -89,6 +105,22 @@ class laser{
         eSSpawn = true;
       }
     }
+    
+    //check if laser hit enemyScout
+    if (fired == true && eSDead2 == false && (shipX.x >= eSX2 - 30 && shipX.x <= eSX2 + 30 && laserPos.y <= eSPos2.y)){
+     eSHp2 = eSHp2 - 5;
+     laserPos.y = laserStartPos; 
+     laserVel.y = 5;
+     hit = true;
+     explX = eSX2;
+     explY = eSPos2.y;
+      if (eSHp2 <= 0){
+        score = score + 20;
+        eSDead2 = true;
+        eS2Spawn = true;
+      }
+    }
+    
     //check if laser hit enemyTank
     if (fired == true && eTDead == false && (shipX.x >= eTX - 30 && shipX.x <= eTX + 30 && laserPos.y <= eTPos.y)){
      eTHp = eTHp - 5;

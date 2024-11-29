@@ -27,9 +27,9 @@ class enemyScout{
     
   }
   
-  void physics(){
+  void physics(int spawnScout){
     
-    if (score >= 300){
+    if (score >= spawnScout){
     if (eSSpawn2 == true|| (eSDead == true && eSSpawn == true)){
      eSX = random(10,width-10);
      eSPos.y = random(-320,-60);

@@ -34,9 +34,17 @@ class setup{
   EnemyNormal = new enemyNormal();
   EnemyNormal.setup();
   
+  //setup for enemyNormal2
+  EnemyNormal2 = new enemyNormal2();
+  EnemyNormal2.setup();
+  
   //setup for enemyScout
   EnemyScout = new enemyScout();
   EnemyScout.setup();
+  
+  //setup for enemyScout
+  EnemyScout2 = new enemyScout2();
+  EnemyScout2.setup();
   
   //setup for enemyTank
   EnemyTank = new enemyTank();

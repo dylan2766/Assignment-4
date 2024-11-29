@@ -2,6 +2,7 @@ class enemyNormal{
   
   PImage[] enemyNormal;
   
+  
   void setup(){
     
     eNHp = 10;
@@ -28,8 +29,9 @@ class enemyNormal{
 
   }
   
-  void physics(){
+  void physics(int scoreN){
     
+    if (score >= scoreN){
     if (eNSpawn2 == true || (eNDead == true && eNSpawn == true)){
      eNX = random(10,width-10);
      eNPos.y = random(-120,-60);
@@ -51,5 +53,5 @@ class enemyNormal{
      eNSpawn2 = true;
     }
   }
-  
+  }
 }
