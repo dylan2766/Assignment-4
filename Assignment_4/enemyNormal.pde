@@ -11,7 +11,7 @@ class enemyNormal{
     eNSpawn2 = false;
     
     eNX = random(10,width-10);
-    eNPos = new PVector(eNX,-30);
+    eNPos = new PVector(eNX,-60);
     eNSpdY = new PVector(0,2);
     
     imageMode(CENTER);

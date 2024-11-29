@@ -11,7 +11,7 @@ class enemyScout{
     eSSpawn2 = false;
     
     eSX = random(10,width-10);
-    eSPos = new PVector(eSX,-30);
+    eSPos = new PVector(eSX,-60);
     eSSpdY = new PVector(0,4);
     
     imageMode(CENTER);
@@ -29,6 +29,7 @@ class enemyScout{
   
   void physics(){
     
+    if (score >= 300){
     if (eSSpawn2 == true || (eSDead == true && eSSpawn == true)){
      eSX = random(10,width-10);
      eSPos.y = -60;
@@ -48,7 +49,7 @@ class enemyScout{
      shipHealth = shipHealth - 20;
      eSSpawn2 = true;
     }
-    
+   }
   }
   
 }
