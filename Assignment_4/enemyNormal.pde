@@ -5,16 +5,17 @@ class enemyNormal{
   
   void setup(){
     
+    //declaring setup variables
     eNHp = 10;
     eNMove = false;
     eNDead = true;
     eNSpawn = true;
     eNSpawn2 = false;
-    
     eNX = random(10,width-10);
     eNPos = new PVector(eNX,-60);
     eNSpdY = new PVector(0,1.5);
     
+    //enemyNormal image setup
     imageMode(CENTER);
     enemyNormal = new PImage[9];
     for(int i = 0; i < enemyNormal.length; i++){
@@ -25,6 +26,7 @@ class enemyNormal{
   
   void visual(){
     
+    //enemyNormal image animation
     image(enemyNormal[frameCount/2 % enemyNormal.length], eNX, eNPos.y);
 
   }
@@ -46,6 +48,7 @@ class enemyNormal{
      spdNormal = random(1.9,2.5);   
     }
     
+    //if score is greater than or equal to scoreN spawn enemyNormal
     if (score >= scoreN){
     if (eNSpawn2 == true || (eNDead == true && eNSpawn == true)){
      eNX = random(10,width-10);

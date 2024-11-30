@@ -83,6 +83,7 @@ void draw(){
   //reset
   Reset.update();
   
+  //resets all variables to start if reset is true
   if (reset == true){
    Setup.start();
    reset = false;
@@ -94,14 +95,17 @@ void draw(){
   StartMenu.physics();
   }
   
+  //if startMenu is not open draw game
   if (startMenu == false){
   drawGame();
   }
   
+  //if player lost draw lose menu
   if (lose == true){
    loseMenu(); 
   }
   
+  //if player won draw win menu
   if (win == true){
    winMenu(); 
   }

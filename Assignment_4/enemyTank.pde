@@ -4,16 +4,17 @@ class enemyTank{
   
   void setup(){
     
+    //variable declaration
     eTHp = 20;
     eTMove = false;
     eTDead = true;
     eTSpawn = true;
     eTSpawn2 = false;
-    
     eTX = random(10,width-10);
     eTPos = new PVector(eTX,-60);
     eTSpdY = new PVector(0,0.5);
     
+    //image setup
     imageMode(CENTER);
     enemyTank = new PImage[9];
     for(int i = 0; i < enemyTank.length; i++){
@@ -23,6 +24,7 @@ class enemyTank{
   
   void visual(){
     
+    //image animation
     image(enemyTank[frameCount/2 % enemyTank.length],eTX, eTPos.y);
     
   }
@@ -44,6 +46,7 @@ class enemyTank{
     spdTank = random(1,1.5);
     }
     
+    //spawns if score is high enough
     if (score >= spawnTank){
     if (eTSpawn2 == true|| (eTDead == true && eTSpawn == true)){
      eTX = random(10,width-10);

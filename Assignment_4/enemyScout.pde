@@ -4,16 +4,17 @@ class enemyScout{
   
   void setup(){
     
+    //variable declaration
     eSHp = 5;
     eSMove = false;
     eSDead = true;
     eSSpawn = true;
     eSSpawn2 = false;
-    
     eSX = random(10,width-10);
     eSPos = new PVector(eSX,-60);
     eSSpdY = new PVector(0,3);
     
+    //image setup
     imageMode(CENTER);
     enemyScout = new PImage[9];
     for(int i = 0; i < enemyScout.length; i++){
@@ -23,6 +24,7 @@ class enemyScout{
   
   void visual(){
     
+    //image animation
     image(enemyScout[frameCount/2 % enemyScout.length],eSX, eSPos.y);
     
   }
@@ -44,6 +46,7 @@ class enemyScout{
     spdScout = random(3.5,4.5);
     }
     
+    //spawns if score is high enough
     if (score >= spawnScout){
     if (eSSpawn2 == true|| (eSDead == true && eSSpawn == true)){
      eSX = random(10,width-10);

@@ -5,6 +5,7 @@ class space{
   
   //Setup for image animation
   void setup(){
+    //image setup
   imageMode(CENTER);
   space = new PImage[29];
   for (int i = 0; i < space.length; i++){
@@ -14,6 +15,7 @@ class space{
   
   //Draws background animation
   void background(){
+    //image animation
    image(space[frameCount/2 % space.length], width/2, height/2); 
   }
   

@@ -8,6 +8,7 @@ class ship{
     shipX = new PVector(shipPosX,0);
     posX = new PVector(8,0);
     
+    //image setup
    imageMode(CENTER);
    ship = new PImage[2];
    for(int i = 0; i < ship.length; i++){
@@ -16,6 +17,7 @@ class ship{
   }
   
   void visual(){
+    //draw image animation
    image(ship[frameCount/3 % ship.length], shipX.x, 350); 
   }
   

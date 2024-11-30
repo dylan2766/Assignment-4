@@ -4,6 +4,7 @@ class explosion{
   
   void setup(){
     
+    //image setup
     imageMode(CENTER);
     explosion = new PImage[19];
     for(int i = 0; i < explosion.length; i++){

@@ -16,6 +16,7 @@ class laser{
     //setup fired is false
     fired = false;
 
+    //image setup
     imageMode(CENTER);
     laser = new PImage[4];
     for (int i = 0; i < laser.length; i++){
@@ -24,6 +25,7 @@ class laser{
   }
   
   void visual(){
+    //if fired is true draws image animation
     if (fired == true){
     image(laser[frameCount/3 % laser.length], shipX.x, laserPos.y);
     }
